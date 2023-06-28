@@ -1,0 +1,283 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@100;300;500&display=swap');
+
+.banner {
+    width: 100%;
+    height: 110vh;
+    background: url('./img/banner-grad.jpg'), 0px -90px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.banner-text p {
+    text-align: center;
+    color: #ffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    letter-spacing: 0.4em;
+    text-shadow: 2px 2px 2px rgba(255,255,255,0.41);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+.navbar {
+    /* background: #fff3; */
+    height: 90px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.navbar .nav-links ul {
+    display: flex;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar .nav-links ul li {
+    margin: 0 30px;
+    text-align: center;
+    color: #ffff;
+    text-transform: uppercase;
+}
+
+.navbar .nav-links ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.information {
+    /* height: 60vh; */
+    background: #000;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.information-content {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: 50px auto;
+    padding: 0;
+}
+
+.img-information {
+    width: 330px;
+}
+
+.information-para {
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+    color: #fff;
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+}
+
+.information-para p{
+    margin: 0 0 20px;
+}
+
+.banner2 {
+    background-image: url('./img/hanoman-pic-grad.jpg');
+    height: 150vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 80px;
+    position: relative;
+    top: -50px;
+}
+
+.gallery {
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.gallery h2 {
+    color: #000;
+    margin-bottom: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.img-gallery {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+}
+
+.img-gallery img {
+    width: 350px;
+    height: 250px;
+}
+
+.registration{
+    display: flex;
+    margin-top: 50px;
+}
+
+.registration img {
+    width: 50%;
+}
+
+.form-registration {
+    width: 50%;
+    padding: 0 60px;
+}
+
+.title-reg {
+    text-align: center;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 2em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.form-reg {
+    margin-top: 30px;
+}
+
+.footer {
+    color: #fff;
+    background: #000;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.footer p{
+    margin: 0;
+}
+
+
+
+
+
+
+
+/*------------------------------------------
+  Responsive Grid Media Queries - 1280, 1024, 768, 480
+   1280-1024   - desktop (default grid)
+   1024-768    - tablet landscape
+   768-480     - tablet 
+   480-less    - phone landscape & smaller
+--------------------------------------------*/
+@media all and (min-width: 1024px) and (max-width: 1280px) { }
+
+@media all and (min-width: 768px) and (max-width: 1024px) { }
+
+@media all and (min-width: 480px) and (max-width: 768px) { 
+
+    .banner {
+        background-position: left center;
+    }
+
+    .navbar .nav-links ul li {
+        margin: 0 10px;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .banner {
+        background-position: left;
+        height: 110vh;
+    }
+    .navbar {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(0, 0, 0);
+    }
+
+    .navbar .nav-links ul li {
+        margin: 0 9px;
+        font-weight: bold;
+    }
+
+    .information {
+        margin-top: -20px;
+        padding: 0 0 50px;
+        position: relative;
+        top: -10px;
+    }
+
+    .information-content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .img-information {
+        width: 80%;
+        /* margin-bottom: 50px; */
+    }
+
+    .information-para {
+        width: 80%;
+        line-height: 1.5em;
+    }
+
+    .banner2 {
+        background-position: center;
+        /* height: 60vh;     */
+    }
+
+    .gallery {
+        padding-bottom: 50px;
+    }
+
+    .img-gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-gallery img {
+        width: 350px;
+        height: 250px;
+        margin-bottom: 15px;
+    }
+
+    .registration {
+       display: flex;
+       flex-direction: column-reverse;
+       align-items: center;
+    }
+
+    .registration img {
+        width: 100%;
+    }
+    
+    .form-registration {
+        margin-bottom: 50px;
+        width: 100%;
+        padding: 0 60px;
+        /* background: rgb(43, 13, 13); */
+    }
+
+    .form-reg {
+        padding: 0;
+    }
+
+    .btn {
+        /* background: #000; */
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+ }
+
