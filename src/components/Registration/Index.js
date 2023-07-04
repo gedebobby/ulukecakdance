@@ -12,12 +12,13 @@ class Registration extends Component {
         super(props);
         this.state = {
             categories: [],
-            url: 'http://127.0.0.1:8000/api/category',
+            // url: 'http://103.41.205.87:2223/api/category',
             // registration: [],
             name: '',
             email: '',
             nowa: '',
-            categoryID: ''
+            categoryID: '',
+            token : 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMDMuNDEuMjA1Ljg3OjIyMjNcL2FwaVwvbG9naW4iLCJpYXQiOjE2ODg0MzUyNTYsImV4cCI6MTY4ODQzODg1NiwibmJmIjoxNjg4NDM1MjU2LCJqdGkiOiJvcGdWTTI3WHhEQVVMYWxpIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.y2WYHofnEiDZOf3MDzsWh-l5KZvj-Umz7yxAPTeUvPY'
         }
 
 
@@ -26,28 +27,19 @@ class Registration extends Component {
     }
 
     componentDidMount(){
-        this.getDays();
-        console.log('hello');
+        this.getCategory();
+        // console.log();
     }
 
-    getDays() {
-          axios.get(this.state.url).then(response => response.data)
-        //   .then((data) => console.log(data))
+    getCategory = () => {
+          axios.get('http://103.41.205.87:2223/api/category', {
+            headers: {'Authorization' : `Bearer ${this.state.token}`}
+          }).then(response => response.data)
+          .then((data) => console.log(data))
           .then((data) => {
-            // const options = [];
             this.setState({
                 categories:data,
             })
-            // data.map((days) => (
-            //     options.push({
-            //         label:days.weekday,
-            //         value:days.weekday,
-            //         disabled: days.isClosed
-            //     })
-            // ))
-            // this.setState({
-            //     options:options
-            // });
         })
     }
 
