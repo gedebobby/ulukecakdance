@@ -7,10 +7,12 @@ import Gallery from "./components/Gallery/Gallery";
 import Information from "./components/Information/Information";
 import Regis from './components/Registration/Regis';
 import Footer from './components/Footer/Footer';
+import Login from './components/Login/Login';
 
 function App() {
   return (
     <div className="App">
+      {/* <Login /> */}
       <Banner/>
       <Information/>
       <Banner2/>
